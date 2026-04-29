@@ -9,9 +9,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "28610",
-            "66615",
-            "5410"
+            "41600",
+            "4138",
+            "6447"
           ]
         },
         {
@@ -19,9 +19,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "012b69962ffef2be728865fe6a90359c",
-            "051a1ee05ed1abcc755cb96dd2b85fd8",
-            "090d37a5171ef833ac48302f4170449d"
+            "10b3e012bc771fc11a6e84b631efedce",
+            "1157f1b869ab1f5edbbdfaec8169a3f3",
+            "14cd94b89c89b4e65cec15efdacc0a88"
           ]
         },
         {
@@ -29,9 +29,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "ed88bc440d530e4a7cca8bb4f2c110d6",
-            "fa9d0d617b46a8e40244113dce291fbe",
-            "cbf9fd4968d35373bb46ed086a93bd49"
+            "73ddc612bdfdbc01e6d7e37c05c38ea6",
+            "1162fa9e5416325aa71b3537ebf2da3d",
+            "11bf151e14f4e5ce06f54c7eaf33490d"
           ]
         },
         {
@@ -39,9 +39,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "sao paulo",
-            "saquarema",
-            "limoeiro"
+            "jandira",
+            "praia grande",
+            "aparecida de goiania"
           ]
         },
         {
@@ -49,9 +49,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "MG",
-            "SP",
-            "DF"
+            "PR",
+            "RN",
+            "AC"
           ]
         },
         {
@@ -59,9 +59,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "-12.935536726633748",
-            "-23.61087407551533",
-            "-23.51481711349263"
+            "-30.073697217292167",
+            "-2.502220358616742",
+            "-25.40629819687705"
           ]
         },
         {
@@ -102,9 +102,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "74805bc388861fa350ed2fade8444e0b",
-            "d2a79636084590b7465af8ab374a8cf5",
-            "61449fa1b8b8998c9c3f3a7f0ae954ef"
+            "ed0271e0b7da060a393796590e7b737a",
+            "cce89a605105b148387c52e286ac8335",
+            "569cf68214806a39acc0f39344aea67f"
           ]
         },
         {
@@ -113,8 +113,8 @@
           "nullable": true,
           "sample_values": [
             "approved",
-            "invoiced",
-            "processing"
+            "shipped",
+            "delivered"
           ]
         },
         {
@@ -132,9 +132,9 @@
           "dtype": "TIMESTAMP",
           "nullable": true,
           "sample_values": [
-            "2017-08-31 08:30:17",
-            "2018-01-27 22:16:18",
-            "2017-07-16 10:35:14"
+            "2017-10-02 11:07:15",
+            "2018-08-05 13:24:34",
+            "2017-05-09 21:02:45"
           ]
         },
         {
@@ -142,9 +142,9 @@
           "dtype": "TIMESTAMP",
           "nullable": true,
           "sample_values": [
-            "2018-08-10 12:29:00",
-            "2017-06-16 14:55:37",
-            "2018-04-27 13:46:00"
+            "2017-10-04 19:55:00",
+            "2018-03-15 19:52:48",
+            "2018-08-06 13:41:00"
           ]
         },
         {
@@ -152,9 +152,9 @@
           "dtype": "TIMESTAMP",
           "nullable": true,
           "sample_values": [
-            "2018-05-21 15:22:11",
-            "2017-04-06 13:37:16",
-            "2018-07-24 20:16:30"
+            "2018-08-10 18:35:40",
+            "2017-07-31 18:17:45",
+            "2018-08-15 00:18:53"
           ]
         },
         {
@@ -208,9 +208,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "e95ee6822b66ac6058e2e4aff656071a",
-            "41eee23c25f7a574dfaf8d5c151dbb12",
-            "7c1bd920dbdf22470b68bde975dd3ccf"
+            "2d9ff06c8870a518f5f6909774e140fb",
+            "28a652ff04e43c1bc57937a9f8770f9b",
+            "8474d936fee23f0c45620cc2022871cc"
           ]
         },
         {
@@ -218,9 +218,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "022cb45264ced2571bbbd8e231838100",
-            "027fb2504084c231e857f6cf558a9992",
-            "0286dd0f954cb641dc3eb5db5e4467e6"
+            "004d76fef3dd46eb4f70da049c8d1f93",
+            "007ec946d4f798caf2b43c9d44c56421",
+            "01311f2795d8463a11f9422173687696"
           ]
         },
         {
@@ -258,9 +258,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "27.9",
-            "96.99",
-            "25.79"
+            "49.0",
+            "48.9",
+            "78.0"
           ]
         },
         {
@@ -278,9 +278,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "64.1",
-            "69.84",
-            "469.39"
+            "72.19",
+            "43.0",
+            "157.34"
           ]
         },
         {
@@ -288,9 +288,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "electronics",
-            "furniture_decor",
-            "health_beauty"
+            "fashion_bags_accessories",
+            "perfumery",
+            "baby"
           ]
         }
       ],
@@ -323,9 +323,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "1",
-            "17",
-            "27"
+            "2",
+            "22",
+            "26"
           ]
         },
         {
@@ -333,9 +333,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "boleto",
             "voucher",
-            "debit_card"
+            "debit_card",
+            "boleto"
           ]
         },
         {
@@ -343,9 +343,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "5",
-            "9",
-            "14"
+            "15",
+            "11",
+            "22"
           ]
         },
         {
@@ -386,9 +386,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "0ce9a24111d850192a933fcaab6fbad3",
-            "04db86e3493b3724ac4bd3c9a397e23c",
-            "55101b36a58251926b6cbfdb540c0461"
+            "0dacf04c5ad59fd5a0cc1faa07c34e39",
+            "14861b02076ed7da9471988265a0104b",
+            "4a7cf245701068d38d441791b735e4bd"
           ]
         },
         {
@@ -398,7 +398,7 @@
           "sample_values": [
             "0",
             "2",
-            "5"
+            "90"
           ]
         },
         {
@@ -416,9 +416,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "OK RECOMENDO",
-            "super rapido a entrega .... chegou antes da data... ",
-            "Gostei muito do jogo de banho.A estampa florida, o bordado, tudo muito bonito. \u00d3timo produto."
+            "Loja nota 10",
+            "Recebi exatamente o que esperava. As demais encomendas de outros vendedores atrasaram, mas esta chegou no prazo.",
+            "Processo de compra tranquilo e eficiente."
           ]
         },
         {
@@ -426,9 +426,9 @@
           "dtype": "TIMESTAMP",
           "nullable": true,
           "sample_values": [
-            "2017-12-19 00:00:00",
-            "2018-03-24 00:00:00",
-            "2018-07-10 00:00:00"
+            "2018-04-13 00:00:00",
+            "2018-08-14 00:00:00",
+            "2017-05-17 00:00:00"
           ]
         },
         {
@@ -436,9 +436,9 @@
           "dtype": "TIMESTAMP",
           "nullable": true,
           "sample_values": [
-            "2018-06-19 17:44:05",
-            "2018-04-07 03:11:49",
-            "2018-05-28 12:48:45"
+            "2018-05-24 03:00:01",
+            "2018-08-15 04:10:37",
+            "2017-10-08 22:36:05"
           ]
         }
       ],
@@ -469,9 +469,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "8628fac2267e8c8804525da99c10ed0e",
-            "6928be51d9496f1aab5da8f15a21aba6",
-            "4338285648648cd4a82f4498801ea736"
+            "8d3d362741da05c706eb55001bdfa1b9",
+            "3be5a877ceebea2954404c6ef8e70be2",
+            "a260ca264a1787a1842ced2735bff664"
           ]
         },
         {
@@ -489,9 +489,9 @@
           "dtype": "DATE",
           "nullable": true,
           "sample_values": [
-            "2017-07-29",
-            "2018-02-06",
-            "2018-01-31"
+            "2017-07-01",
+            "2018-07-27",
+            "2018-06-03"
           ]
         },
         {
@@ -518,9 +518,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "santa rosa",
-            "sorocaba",
-            "flores da cunha"
+            "porto alegre",
+            "rio de janeiro",
+            "engenheiro coelho"
           ]
         },
         {
@@ -538,9 +538,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "17.28",
-            "43.0",
-            "84.43"
+            "169.76",
+            "231.12",
+            "409.79"
           ]
         },
         {
@@ -558,8 +558,8 @@
           "dtype": "BIGINT",
           "nullable": true,
           "sample_values": [
-            "1",
-            "12",
+            "3",
+            "11",
             "6"
           ]
         },
@@ -568,9 +568,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "17.28",
-            "43.0",
-            "409.78999999999996"
+            "57.0",
+            "253.4",
+            "113.62"
           ]
         },
         {
@@ -578,9 +578,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "2",
+            "1",
             "3",
-            "1"
+            "2"
           ]
         }
       ],
@@ -619,9 +619,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "cef67bcfe19066a932b7673e239eb23d",
-            "37cc742be07708b53a98702e77a21a02",
-            "a1b71017a84f92fd8da4aeefba108a24"
+            "41d3672d4792049fa1779bb35283ed13",
+            "a0253d43394dd4da9a5d7b1f546f1a32",
+            "83b9bc6aae6f527ff6aafb9e01d6cbf3"
           ]
         },
         {
@@ -629,9 +629,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "44",
-            "37",
-            "54"
+            "22",
+            "52",
+            "55"
           ]
         },
         {
@@ -649,9 +649,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "5",
-            "9",
-            "17"
+            "0",
+            "11",
+            "15"
           ]
         },
         {
@@ -659,9 +659,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "225",
-            "154",
-            "371"
+            "1700",
+            "8950",
+            "6000"
           ]
         },
         {
@@ -679,9 +679,9 @@
           "dtype": "INTEGER",
           "nullable": true,
           "sample_values": [
-            "9",
-            "17",
-            "5"
+            "11",
+            "15",
+            "32"
           ]
         },
         {
@@ -699,9 +699,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "perfumery",
-            "baby",
-            "fashion_bags_accessories"
+            "musical_instruments",
+            "furniture_decor",
+            "health_beauty"
           ]
         }
       ],
@@ -729,9 +729,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "f410c8873029fcc3809b9df6d0b28914",
-            "bba3293d6f5d5af2f415e004e8b93ae3",
-            "674207551483fec113276b67b0d871ff"
+            "d1b65fc7debc3361ea86b5f14c68d2e2",
+            "d52cbce9845184537284a23c3bc3da0e",
+            "d3e7d37c0df9aef383f3f2a15b0dddfb"
           ]
         },
         {
@@ -739,9 +739,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "caxias do sul",
-            "mirassol",
-            "rio de janeiro"
+            "guaruja",
+            "petropolis",
+            "sao bernardo do campo"
           ]
         },
         {
@@ -749,9 +749,9 @@
           "dtype": "VARCHAR",
           "nullable": true,
           "sample_values": [
-            "PR",
-            "AC",
-            "RN"
+            "SP",
+            "MG",
+            "DF"
           ]
         },
         {
@@ -759,9 +759,9 @@
           "dtype": "DOUBLE",
           "nullable": true,
           "sample_values": [
-            "-29.178216467446862",
-            "-29.511355583933106",
-            "-20.794068968967032"
+            "-22.964802783097724",
+            "-23.943377092119324",
+            "-22.920186332834533"
           ]
         },
         {

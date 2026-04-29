@@ -14,7 +14,7 @@ class GenerationResult:
 
 
 SYSTEM_PROMPT = """\
-You are an expert SQL analyst. Write a single correct DuckDB SQL query to answer the question.
+Write a single correct DuckDB SQL query to answer the question.
 Rules:
 - Output ONLY raw SQL. No markdown, no explanation, no preamble.
 - Qualify all column names with table names when joining.
