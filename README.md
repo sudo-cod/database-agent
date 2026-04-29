@@ -36,19 +36,14 @@ API keys are held in memory only — never stored or sent anywhere except the LL
 ## Project Structure
 
 ```
-frontend/               ← React + TypeScript website (deployed to GitHub Pages)
+frontend/
 │   src/lib/
-│   ├── duckdb.ts       ← DuckDB WASM init, CSV loader, query runner
+│   ├── duckdb.ts           ← DuckDB WASM init, CSV loader, query runner
 │   ├── schemaExtractor.ts  ← table/column introspection + FK inference
-│   ├── llm.ts          ← fetch-based LLM calls (Anthropic / OpenAI / DeepSeek)
-│   ├── sqlGenerator.ts ← prompt builder + SQL extraction
-│   ├── executor.ts     ← self-repair retry loop
-│   └── analyzer.ts     ← result analysis + chart recommendations
-│
-agent/                  ← Python SQL agent (local use)
-spark/                  ← Spark ETL pipeline for the Olist dataset (local use)
-warehouse/              ← DuckDB loader for Olist Parquet files (local use)
-data/                   ← raw and processed data
+│   ├── llm.ts              ← fetch-based LLM calls (Anthropic / OpenAI / DeepSeek)
+│   ├── sqlGenerator.ts     ← prompt builder + SQL extraction
+│   ├── executor.ts         ← self-repair retry loop
+│   └── analyzer.ts         ← result analysis + chart recommendations
 ```
 
 ## Local Development
@@ -64,15 +59,3 @@ npm run build     # production build → frontend/dist/
 
 Pushing any change under `frontend/` to `main` triggers the GitHub Actions workflow which builds and deploys to GitHub Pages automatically.
 
-## Running the Olist Pipeline Locally
-
-The `spark/` and `warehouse/` directories contain a standalone ETL pipeline for the [Brazilian E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). These are independent of the website.
-
-```bash
-# Requires Python + PySpark
-pip install pyspark duckdb pandas pyarrow
-
-# Place Olist CSVs in data/raw/, then:
-python spark/run_pipeline.py
-python warehouse/load_duckdb.py
-```
