@@ -1,0 +1,785 @@
+{
+  "tables": [
+    {
+      "name": "customers",
+      "row_count": 99441,
+      "columns": [
+        {
+          "name": "zip_prefix",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "28610",
+            "66615",
+            "5410"
+          ]
+        },
+        {
+          "name": "customer_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "012b69962ffef2be728865fe6a90359c",
+            "051a1ee05ed1abcc755cb96dd2b85fd8",
+            "090d37a5171ef833ac48302f4170449d"
+          ]
+        },
+        {
+          "name": "customer_unique_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "ed88bc440d530e4a7cca8bb4f2c110d6",
+            "fa9d0d617b46a8e40244113dce291fbe",
+            "cbf9fd4968d35373bb46ed086a93bd49"
+          ]
+        },
+        {
+          "name": "customer_city",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "sao paulo",
+            "saquarema",
+            "limoeiro"
+          ]
+        },
+        {
+          "name": "customer_state",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "MG",
+            "SP",
+            "DF"
+          ]
+        },
+        {
+          "name": "customer_lat",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "-12.935536726633748",
+            "-23.61087407551533",
+            "-23.51481711349263"
+          ]
+        },
+        {
+          "name": "customer_lng",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "-46.677209571939294",
+            "-47.1829946920607",
+            "-46.558315545885854"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "zip_prefix -> sellers.zip_prefix",
+        "customer_id -> orders.customer_id",
+        "customer_id -> order_summary.customer_id",
+        "customer_city -> order_summary.customer_city",
+        "customer_state -> order_summary.customer_state"
+      ]
+    },
+    {
+      "name": "orders",
+      "row_count": 98832,
+      "columns": [
+        {
+          "name": "order_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "2807d0e504d6d4894d41672727bc139f",
+            "8563039e855156e48fccee4d611a3196",
+            "bd4bd0194d6d29f83b8557d4b89b572a"
+          ]
+        },
+        {
+          "name": "customer_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "74805bc388861fa350ed2fade8444e0b",
+            "d2a79636084590b7465af8ab374a8cf5",
+            "61449fa1b8b8998c9c3f3a7f0ae954ef"
+          ]
+        },
+        {
+          "name": "order_status",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "approved",
+            "invoiced",
+            "processing"
+          ]
+        },
+        {
+          "name": "order_purchase_timestamp",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2018-02-03 12:38:58",
+            "2017-04-20 17:15:46",
+            "2017-09-15 09:19:48"
+          ]
+        },
+        {
+          "name": "order_approved_at",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2017-08-31 08:30:17",
+            "2018-01-27 22:16:18",
+            "2017-07-16 10:35:14"
+          ]
+        },
+        {
+          "name": "order_delivered_carrier_date",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2018-08-10 12:29:00",
+            "2017-06-16 14:55:37",
+            "2018-04-27 13:46:00"
+          ]
+        },
+        {
+          "name": "order_delivered_customer_date",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2018-05-21 15:22:11",
+            "2017-04-06 13:37:16",
+            "2018-07-24 20:16:30"
+          ]
+        },
+        {
+          "name": "order_estimated_delivery_date",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2018-08-13 00:00:00",
+            "2018-03-20 00:00:00",
+            "2017-06-12 00:00:00"
+          ]
+        },
+        {
+          "name": "delivery_days",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "11",
+            "22",
+            "31"
+          ]
+        },
+        {
+          "name": "is_late",
+          "dtype": "BOOLEAN",
+          "nullable": true,
+          "sample_values": [
+            "False",
+            "True"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "customer_id -> customers.customer_id",
+        "customer_id -> order_summary.customer_id",
+        "order_id -> order_items.order_id",
+        "order_id -> order_payments.order_id",
+        "order_id -> order_reviews.order_id",
+        "order_id -> order_summary.order_id",
+        "order_status -> order_summary.order_status",
+        "delivery_days -> order_summary.delivery_days",
+        "is_late -> order_summary.is_late"
+      ]
+    },
+    {
+      "name": "order_items",
+      "row_count": 112650,
+      "columns": [
+        {
+          "name": "product_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "e95ee6822b66ac6058e2e4aff656071a",
+            "41eee23c25f7a574dfaf8d5c151dbb12",
+            "7c1bd920dbdf22470b68bde975dd3ccf"
+          ]
+        },
+        {
+          "name": "order_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "022cb45264ced2571bbbd8e231838100",
+            "027fb2504084c231e857f6cf558a9992",
+            "0286dd0f954cb641dc3eb5db5e4467e6"
+          ]
+        },
+        {
+          "name": "order_item_id",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "1",
+            "12",
+            "16"
+          ]
+        },
+        {
+          "name": "seller_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "a17f621c590ea0fab3d5d883e1630ec6",
+            "cfb1a033743668a192316f3c6d1d2671",
+            "b2ac621f0d0322434d04a12b078b9369"
+          ]
+        },
+        {
+          "name": "shipping_limit_date",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2017-08-17 07:15:16",
+            "2017-08-18 03:15:35",
+            "2018-01-26 14:16:49"
+          ]
+        },
+        {
+          "name": "price",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "27.9",
+            "96.99",
+            "25.79"
+          ]
+        },
+        {
+          "name": "freight_value",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "15.1",
+            "8.54",
+            "34.07"
+          ]
+        },
+        {
+          "name": "total_item_value",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "64.1",
+            "69.84",
+            "469.39"
+          ]
+        },
+        {
+          "name": "product_category_name_english",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "electronics",
+            "furniture_decor",
+            "health_beauty"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "order_id -> orders.order_id",
+        "order_id -> order_payments.order_id",
+        "order_id -> order_reviews.order_id",
+        "order_id -> order_summary.order_id",
+        "product_id -> products.product_id",
+        "seller_id -> sellers.seller_id",
+        "product_category_name_english -> products.product_category_name_english"
+      ]
+    },
+    {
+      "name": "order_payments",
+      "row_count": 103877,
+      "columns": [
+        {
+          "name": "order_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "b81ef226f3fe1789b1e8b2acac839d17",
+            "a9810da82917af2d9aefd1278f1dcfa0",
+            "8ac09207f415d55acff302df7d6a895c"
+          ]
+        },
+        {
+          "name": "payment_sequential",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "1",
+            "17",
+            "27"
+          ]
+        },
+        {
+          "name": "payment_type",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "boleto",
+            "voucher",
+            "debit_card"
+          ]
+        },
+        {
+          "name": "payment_installments",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "5",
+            "9",
+            "14"
+          ]
+        },
+        {
+          "name": "payment_value",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "107.78",
+            "51.84",
+            "157.45"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "order_id -> orders.order_id",
+        "order_id -> order_items.order_id",
+        "order_id -> order_reviews.order_id",
+        "order_id -> order_summary.order_id",
+        "payment_type -> order_summary.payment_type"
+      ]
+    },
+    {
+      "name": "order_reviews",
+      "row_count": 104162,
+      "columns": [
+        {
+          "name": "review_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "e64fb393e7b32834bb789ff8bb30750e",
+            "f7c4243c7fe1938f181bec41a392bdeb",
+            "6a18a4001ae7fd911b3b9fb13686d105"
+          ]
+        },
+        {
+          "name": "order_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "0ce9a24111d850192a933fcaab6fbad3",
+            "04db86e3493b3724ac4bd3c9a397e23c",
+            "55101b36a58251926b6cbfdb540c0461"
+          ]
+        },
+        {
+          "name": "review_score",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "0",
+            "2",
+            "5"
+          ]
+        },
+        {
+          "name": "review_comment_title",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "recomendo",
+            "N\u00e3o chegou meu produto ",
+            "Entrega atrasou"
+          ]
+        },
+        {
+          "name": "review_comment_message",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "OK RECOMENDO",
+            "super rapido a entrega .... chegou antes da data... ",
+            "Gostei muito do jogo de banho.A estampa florida, o bordado, tudo muito bonito. \u00d3timo produto."
+          ]
+        },
+        {
+          "name": "review_creation_date",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2017-12-19 00:00:00",
+            "2018-03-24 00:00:00",
+            "2018-07-10 00:00:00"
+          ]
+        },
+        {
+          "name": "review_answer_timestamp",
+          "dtype": "TIMESTAMP",
+          "nullable": true,
+          "sample_values": [
+            "2018-06-19 17:44:05",
+            "2018-04-07 03:11:49",
+            "2018-05-28 12:48:45"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "order_id -> orders.order_id",
+        "order_id -> order_items.order_id",
+        "order_id -> order_payments.order_id",
+        "order_id -> order_summary.order_id",
+        "review_score -> order_summary.review_score"
+      ]
+    },
+    {
+      "name": "order_summary",
+      "row_count": 98832,
+      "columns": [
+        {
+          "name": "order_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "2807d0e504d6d4894d41672727bc139f",
+            "5342acb7b183acec77f59e4d78f7c804",
+            "4f38a875c972c4803a792f62b999b4cd"
+          ]
+        },
+        {
+          "name": "customer_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "8628fac2267e8c8804525da99c10ed0e",
+            "6928be51d9496f1aab5da8f15a21aba6",
+            "4338285648648cd4a82f4498801ea736"
+          ]
+        },
+        {
+          "name": "order_status",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "approved",
+            "invoiced",
+            "canceled"
+          ]
+        },
+        {
+          "name": "purchase_date",
+          "dtype": "DATE",
+          "nullable": true,
+          "sample_values": [
+            "2017-07-29",
+            "2018-02-06",
+            "2018-01-31"
+          ]
+        },
+        {
+          "name": "delivery_days",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "11",
+            "26",
+            "16"
+          ]
+        },
+        {
+          "name": "is_late",
+          "dtype": "BOOLEAN",
+          "nullable": true,
+          "sample_values": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "customer_city",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "santa rosa",
+            "sorocaba",
+            "flores da cunha"
+          ]
+        },
+        {
+          "name": "customer_state",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "SP",
+            "MG",
+            "MA"
+          ]
+        },
+        {
+          "name": "total_payment",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "17.28",
+            "43.0",
+            "84.43"
+          ]
+        },
+        {
+          "name": "payment_type",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "voucher",
+            "debit_card",
+            "boleto"
+          ]
+        },
+        {
+          "name": "item_count",
+          "dtype": "BIGINT",
+          "nullable": true,
+          "sample_values": [
+            "1",
+            "12",
+            "6"
+          ]
+        },
+        {
+          "name": "total_items_value",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "17.28",
+            "43.0",
+            "409.78999999999996"
+          ]
+        },
+        {
+          "name": "review_score",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "2",
+            "3",
+            "1"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "customer_id -> customers.customer_id",
+        "customer_id -> orders.customer_id",
+        "customer_city -> customers.customer_city",
+        "customer_state -> customers.customer_state",
+        "order_id -> orders.order_id",
+        "order_id -> order_items.order_id",
+        "order_id -> order_payments.order_id",
+        "order_id -> order_reviews.order_id",
+        "order_status -> orders.order_status",
+        "delivery_days -> orders.delivery_days",
+        "is_late -> orders.is_late",
+        "payment_type -> order_payments.payment_type",
+        "review_score -> order_reviews.review_score"
+      ]
+    },
+    {
+      "name": "products",
+      "row_count": 32951,
+      "columns": [
+        {
+          "name": "product_category_name",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "artes",
+            "utilidades_domesticas",
+            "brinquedos"
+          ]
+        },
+        {
+          "name": "product_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "cef67bcfe19066a932b7673e239eb23d",
+            "37cc742be07708b53a98702e77a21a02",
+            "a1b71017a84f92fd8da4aeefba108a24"
+          ]
+        },
+        {
+          "name": "product_name_lenght",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "44",
+            "37",
+            "54"
+          ]
+        },
+        {
+          "name": "product_description_lenght",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "745",
+            "163",
+            "636"
+          ]
+        },
+        {
+          "name": "product_photos_qty",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "5",
+            "9",
+            "17"
+          ]
+        },
+        {
+          "name": "product_weight_g",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "225",
+            "154",
+            "371"
+          ]
+        },
+        {
+          "name": "product_length_cm",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "16",
+            "26",
+            "52"
+          ]
+        },
+        {
+          "name": "product_height_cm",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "9",
+            "17",
+            "5"
+          ]
+        },
+        {
+          "name": "product_width_cm",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "15",
+            "26",
+            "11"
+          ]
+        },
+        {
+          "name": "product_category_name_english",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "perfumery",
+            "baby",
+            "fashion_bags_accessories"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "product_id -> order_items.product_id",
+        "product_category_name_english -> order_items.product_category_name_english"
+      ]
+    },
+    {
+      "name": "sellers",
+      "row_count": 3095,
+      "columns": [
+        {
+          "name": "zip_prefix",
+          "dtype": "INTEGER",
+          "nullable": true,
+          "sample_values": [
+            "15350",
+            "81070",
+            "75640"
+          ]
+        },
+        {
+          "name": "seller_id",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "f410c8873029fcc3809b9df6d0b28914",
+            "bba3293d6f5d5af2f415e004e8b93ae3",
+            "674207551483fec113276b67b0d871ff"
+          ]
+        },
+        {
+          "name": "seller_city",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "caxias do sul",
+            "mirassol",
+            "rio de janeiro"
+          ]
+        },
+        {
+          "name": "seller_state",
+          "dtype": "VARCHAR",
+          "nullable": true,
+          "sample_values": [
+            "PR",
+            "AC",
+            "RN"
+          ]
+        },
+        {
+          "name": "seller_lat",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "-29.178216467446862",
+            "-29.511355583933106",
+            "-20.794068968967032"
+          ]
+        },
+        {
+          "name": "seller_lng",
+          "dtype": "DOUBLE",
+          "nullable": true,
+          "sample_values": [
+            "-48.6314633279986",
+            "-45.46440222679634",
+            "-46.34993692750342"
+          ]
+        }
+      ],
+      "foreign_key_hints": [
+        "zip_prefix -> customers.zip_prefix",
+        "seller_id -> order_items.seller_id"
+      ]
+    }
+  ],
+  "db_path": "/home/jovyan/work/app/../data/olist.duckdb"
+}
